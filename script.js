@@ -6,6 +6,7 @@ var confirmNumber;
 var confirmSpecial;
 var confirmUpper;
 var confirmLower;
+var criteria;
 
 // input arrays (numbers, special characters, uppercase letters, lowercase letters)
 number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -60,3 +61,73 @@ else {
   confirmUpper = window.confirm("Should this contain uppercase letters?");
   confirmLower = window.confirm("Should this contain lowercase letters?");
 };
+
+// alert for if all negative 
+if (!confirmNumber && !confirmSpecial && !confirmUpper &&!confirmLower) {
+  criteria = window.alert("Please enter a criteria!");
+}
+
+// if all criteria chosen 
+else if (confirmNumber && confirmSpecial && confirmUpper && confirmLower) {
+  criteria = number.concat(special, upper, lower);
+}
+
+// if 3 criteria chosen
+else if (confirmNumber && confirmSpecial && confirmUpper) {
+  criteria = number.concat(special, upper);
+}
+
+else if (confirmNumber && confirmSpecial && confirmLower) {
+  criteria = number.concat(special, lower);
+}
+
+else if (confirmNumber && confirmUpper && confirmLower) {
+  criteria = number.concat(upper, lower);
+}
+
+else if (confirmSpecial && confirmUpper && confirmLower) {
+  criteria = special.concat(upper, lower);
+}
+
+// if 2 criteria chosen
+else if (confirmNumber && confirmSpecial) {
+  criteria = number.concat(special);
+}
+
+else if (confirmNumber && confirmUpper) {
+  criteria = number.concat(upper);
+}
+
+else if (confirmNumber && confirmLower) {
+  criteria = number.concat(lower);
+}
+
+else if (confirmSpecial && confirmLower) {
+  criteria = special.concat(lower);
+}
+
+else if (confirmSpecial && confirmUpper){
+  criteria = special.concat(upper);
+}
+
+else if (confirmUpper && confirmLower) {
+  criteria = upper.concat(lower);
+}
+
+// if 1 criteria chosen
+
+else if (confirmNumber) {
+  criteria = number;
+}
+
+else if (confirmSpecial) {
+  criteria = special;
+}
+
+else if (confirmUpper) {
+  criteria = upper;
+}
+
+else if (confirmLower) {
+  criteria = lower;
+}
