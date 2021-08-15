@@ -35,5 +35,7 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
     -write password function displays criteria-based password in textbox using password and generator ids
-    
+ 
+ 
+ <img>chrome-extension://fdpohaocaechififmbbbbbknoalclacl/capture.html?id=2&url=https%3A%2F%2Frynmrphy18.github.io%2FRandy-Passy-Makey%2F</img>
     
