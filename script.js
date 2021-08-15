@@ -17,32 +17,9 @@ upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "
 
 lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
+function generatePassword() {
 
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// event listener linked to button in content section 
-generateBtn.addEventListener("click", function(){
-    ps = writePassword();
-    document.getElementById("#password").placeholder = ps;
-});
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-
-
-
-enter = parseInt(prompt("How many characters would you like in your password? Please choose between 8 and 128."));
+  enter = parseInt(prompt("How many characters would you like in your password? Please choose between 8 and 128."));
 
 // first criteria alert
 if (!enter) { 
@@ -51,7 +28,7 @@ if (!enter) {
 
 // second criteria alert/prompt
 else if (enter < 8 || enter > 128) {
-  enter = parseInt(prompt("Inputted value not between 8 and 128."));
+  enter = parseInt(prompt("Inputted value not between 8 and 128. Please try again."));
 }
 
 // user criteria input
@@ -131,3 +108,33 @@ else if (confirmUpper) {
 else if (confirmLower) {
   criteria = lower;
 }
+
+// input length placeholder
+var password = [];
+
+// random generation based on chosen criteria
+for (var i=0;i<enter.length;i++) {
+  var pickCriteria = criteria[Math.floor(math.random() * criteria.length)];
+  password.push(pickCriteria);
+}}
+
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+}
+
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+
+// 
+generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
+
