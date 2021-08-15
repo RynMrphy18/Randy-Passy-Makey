@@ -109,15 +109,18 @@ else if (confirmLower) {
   criteria = lower;
 }
 
-// input length placeholder
-var password = [];
+// empty string to incoporate with pickCriteria in for loop
+var password = "";
 
 // random generation based on chosen criteria
-for (var i=0;i<enter.length;i++) {
-  var pickCriteria = criteria[Math.floor(math.random() * criteria.length)];
-  password.push(pickCriteria);
-}}
+for (var i=0; i < enter ; i++) {
+  var pickCriteria = criteria[Math.floor(Math.random() * criteria.length)];
+  password += pickCriteria;
+}
 
+// password return to allow next function
+return password;
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -130,7 +133,7 @@ function writePassword() {
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// 
+// Add event listener upon clicking generate password button
 generateBtn.addEventListener("click", writePassword);
 
 
