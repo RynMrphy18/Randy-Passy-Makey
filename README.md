@@ -37,5 +37,12 @@ THEN the password is either displayed in an alert or written to the page
     -write password function displays criteria-based password in textbox using password and generator ids
  
  
+ 
+ 
 ![image](https://user-images.githubusercontent.com/87506145/129495041-03ea134b-7925-4800-ac85-8c2a934720d1.png)
     
+
+
+Deployed site: https://rynmrphy18.github.io/Randy-Passy-Makey/
+
+Github repo: https://github.com/RynMrphy18/Randy-Passy-Makey
